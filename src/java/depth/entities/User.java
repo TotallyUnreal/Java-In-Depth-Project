@@ -5,6 +5,7 @@ public class User {
 	private String email;
 	private String password;
 	private String firstName;
+	private String lastName;
 	private int gender;
 	private String userType;
 
@@ -38,6 +39,14 @@ public class User {
 
 	public void setFirstName(String firstName) {
 		this.firstName = firstName;
+	}
+	
+	public String getLastName() {
+		return lastName;
+	}
+	
+	public void setLastName(String lastName) {
+		this.lastName = lastName;
 	}
 
 	public int getGender() {
