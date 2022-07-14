@@ -5,8 +5,7 @@ import java.depth.entities.User;
 public class UserService {
 	private static UserService instance = new UserService();
 
-	private UserService() {
-	}
+	private UserService() {}
 
 	public static UserService getInstance() {
 		return instance;
