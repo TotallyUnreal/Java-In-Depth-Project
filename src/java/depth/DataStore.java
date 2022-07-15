@@ -80,10 +80,6 @@ public class DataStore {
 		return users;
 	}
 
-	public static void setUsers(User[] users) {
-		DataStore.users = users;
-	}
-
 	private static void loadBooks() {
 		bookmarks[2][0] = BookmarkService.getInstance().createBook(4000, "Walden", 1854, "Wilder Publications",
 				new String[] { "Henry David Thoreau" }, BookGenre.PHILOSOPHY, 4.3);
