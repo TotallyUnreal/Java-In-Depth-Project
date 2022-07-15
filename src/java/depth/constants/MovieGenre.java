@@ -28,5 +28,6 @@ public class MovieGenre {
 	public static final String DOCUMENTARIES = "Documentaries";
 	public static final String FOREIGN_MOVIES = "Foreign Movies";
 	public static final String ROMANTIC_COMEDIES = "Romantic Comedies";
+	public static final String TECHNICAL = "Technical";
 	
 }
