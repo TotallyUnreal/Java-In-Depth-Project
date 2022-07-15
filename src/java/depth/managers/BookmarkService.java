@@ -1,5 +1,6 @@
 package java.depth.managers;
 
+import java.depth.dao.BookmarkDao;
 import java.depth.entities.Book;
 import java.depth.entities.Bookmark;
 import java.depth.entities.Movie;
@@ -7,7 +8,8 @@ import java.depth.entities.WebLink;
 
 public class BookmarkService {
 	private static BookmarkService instance = new BookmarkService();
-
+	private static BookmarkDao dao = new BookmarkDao();
+	
 	private BookmarkService() {
 	}
 
@@ -65,5 +67,9 @@ public class BookmarkService {
 		movie.setImdbRating(imdbRating);
 
 		return movie;
+	}
+	
+	public Bookmark[][] getBookmarks() {
+		return dao.getBookmarks();
 	}
 }

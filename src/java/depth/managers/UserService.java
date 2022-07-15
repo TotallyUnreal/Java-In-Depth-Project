@@ -1,9 +1,11 @@
 package java.depth.managers;
 
+import java.depth.dao.UserDao;
 import java.depth.entities.User;
 
 public class UserService {
 	private static UserService instance = new UserService();
+	private static UserDao dao = new UserDao();
 
 	private UserService() {}
 
@@ -24,5 +26,9 @@ public class UserService {
 		user.setUserType(userType);
 		
 		return user;
+	}
+	
+	public User[] getUsers() {
+		return dao.getUsers();
 	}
 }
