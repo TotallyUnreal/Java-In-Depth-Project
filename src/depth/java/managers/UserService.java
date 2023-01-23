@@ -1,5 +1,8 @@
 package depth.java.managers;
 
+import java.util.List;
+
+import depth.java.constants.Gender;
 import depth.java.dao.UserDao;
 import depth.java.entities.User;
 
@@ -13,7 +16,7 @@ public class UserService {
 		return instance;
 	}
 
-	public User createUser(long id, String email, String password, String firstName, String lastName, int gender,
+	public User createUser(long id, String email, String password, String firstName, String lastName, Gender gender,
 			String userType) {
 		User user = new User();
 		
@@ -28,7 +31,7 @@ public class UserService {
 		return user;
 	}
 	
-	public User[] getUsers() {
+	public List<User> getUsers() {
 		return dao.getUsers();
 	}
 }

@@ -1,9 +1,19 @@
 package depth.java.constants;
 
-public class Gender {
-	private Gender() {}
+public enum Gender {
 	
-	public static final int MALE = 0;
-	public static final int FEMALE = 1;
-	public static final int OTHER = 2;
+	MALE(0),
+	FEMALE(1),
+	OTHER(2);
+	
+	
+	private Gender(int gender) {
+		this.gender = gender;
+	}
+	
+	private int gender;
+	
+	public int getGender() {
+		return gender;
+	}
 }
